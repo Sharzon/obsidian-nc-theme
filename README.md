@@ -4,7 +4,7 @@ A dark theme for [Obsidian](https://obsidian.md) inspired by **Norton Commander*
 
 Softened CGA palette, NC-style UI elements, and an optional CRT monitor effect.
 
-![NC Theme Screenshot](screenshots/screenshot.png)
+![NC Theme](screenshots/main.png)
 
 ## Features
 
@@ -18,9 +18,15 @@ Softened CGA palette, NC-style UI elements, and an optional CRT monitor effect.
 
 ## Screenshots
 
-> **TODO:** Add screenshots here
->
-> Recommended: editor view, sidebar, settings dialog, canvas, CRT mode on/off
+### CRT Mode
+
+![CRT Mode](screenshots/crt.png)
+
+## Recommended Font
+
+The screenshots use [Px437 IBM VGA 9x16](https://int10h.org/oldschool-pc-fonts/) — the actual VGA font from the DOS era. Install it for the full NC experience.
+
+**Settings → Appearance → Text font / Monospace font** → `Px437 IBM VGA 9x16`
 
 ## CRT Mode
 
@@ -34,7 +40,6 @@ This enables:
 - Screen vignette (darkened edges)
 - DOS block cursor with blink animation
 - Subtle screen flicker
-- DOS VGA font (if installed)
 
 ## Installation
 
