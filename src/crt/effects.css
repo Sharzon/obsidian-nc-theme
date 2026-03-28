@@ -1,11 +1,25 @@
 /* ============================================
-   NC Theme CRT — CRT Monitor Effects
-   "DOS на ЭЛТ-мониторе" — scanlines, glow, vignette
+   NC Theme — CRT Monitor Effects
+   Toggled via Style Settings plugin (class: nc-crt-enabled)
    ============================================ */
 
-/* ---- Font: DOS VGA ---- */
+/* @settings
 
-.theme-dark {
+name: NC Theme
+id: nc-theme
+settings:
+  -
+    id: nc-crt-enabled
+    title: CRT Effects
+    description: Enable CRT monitor effects (scanlines, glow, vignette, DOS cursor)
+    type: class-toggle
+    default: false
+
+*/
+
+/* ---- Font: DOS VGA (only when CRT enabled) ---- */
+
+body.nc-crt-enabled {
   --font-text-theme: "Perfect DOS VGA 437", "Courier New", "Consolas", monospace;
   --font-interface-theme: "Perfect DOS VGA 437", "Courier New", "Consolas", monospace;
   --font-monospace-theme: "Perfect DOS VGA 437", "Courier New", "Consolas", monospace;
@@ -13,7 +27,7 @@
 
 /* ---- Scanlines overlay ---- */
 
-body::after {
+body.nc-crt-enabled::after {
   content: "";
   position: fixed;
   top: 0;
@@ -33,7 +47,7 @@ body::after {
 
 /* ---- Vignette (darkened edges) ---- */
 
-body::before {
+body.nc-crt-enabled::before {
   content: "";
   position: fixed;
   top: 0;
@@ -51,66 +65,57 @@ body::before {
 
 /* ---- Text glow (phosphor emission) ---- */
 
-/* Main content glow — subtle */
-.theme-dark .markdown-source-view,
-.theme-dark .markdown-reading-view,
-.theme-dark .markdown-rendered {
+body.nc-crt-enabled .markdown-source-view,
+body.nc-crt-enabled .markdown-reading-view,
+body.nc-crt-enabled .markdown-rendered {
   text-shadow: 0 0 1px currentColor;
 }
 
-/* Headings: slightly more glow, but not blinding */
-.theme-dark .markdown-rendered h1,
-.theme-dark .markdown-rendered h2,
-.theme-dark .markdown-rendered h3,
-.theme-dark .inline-title,
-.theme-dark .cm-header {
+body.nc-crt-enabled .markdown-rendered h1,
+body.nc-crt-enabled .markdown-rendered h2,
+body.nc-crt-enabled .markdown-rendered h3,
+body.nc-crt-enabled .inline-title,
+body.nc-crt-enabled .cm-header {
   text-shadow: 0 0 2px currentColor;
 }
 
-/* Navigation glow */
-.theme-dark .nav-file-title,
-.theme-dark .nav-folder-title {
+body.nc-crt-enabled .nav-file-title,
+body.nc-crt-enabled .nav-folder-title {
   text-shadow: 0 0 1px currentColor;
 }
 
-/* Active nav: subtle glow */
-.theme-dark .nav-file-title.is-active {
+body.nc-crt-enabled .nav-file-title.is-active {
   text-shadow: 0 0 2px currentColor;
 }
 
-/* Status bar glow */
-.theme-dark .status-bar {
+body.nc-crt-enabled .status-bar {
   text-shadow: 0 0 1px #00AAAA;
 }
 
-/* Tab glow */
-.theme-dark .workspace-tab-header.is-active {
+body.nc-crt-enabled .workspace-tab-header.is-active {
   text-shadow: 0 0 1px currentColor;
 }
 
-/* Code glow */
-.theme-dark pre code {
+body.nc-crt-enabled pre code {
   text-shadow: 0 0 1px currentColor;
 }
 
-/* Links glow */
-.theme-dark a {
+body.nc-crt-enabled a {
   text-shadow: 0 0 1px currentColor;
 }
 
 /* ---- Phosphor bleed (slight blur on text edges) ---- */
 
-.theme-dark .markdown-source-view .cm-line,
-.theme-dark .markdown-rendered p,
-.theme-dark .markdown-rendered li,
-.theme-dark .markdown-rendered blockquote {
+body.nc-crt-enabled .markdown-source-view .cm-line,
+body.nc-crt-enabled .markdown-rendered p,
+body.nc-crt-enabled .markdown-rendered li,
+body.nc-crt-enabled .markdown-rendered blockquote {
   filter: blur(0.2px);
 }
 
-/* Headings: slightly more bleed */
-.theme-dark .markdown-rendered h1,
-.theme-dark .markdown-rendered h2,
-.theme-dark .inline-title {
+body.nc-crt-enabled .markdown-rendered h1,
+body.nc-crt-enabled .markdown-rendered h2,
+body.nc-crt-enabled .inline-title {
   filter: blur(0.3px);
 }
 
@@ -125,7 +130,7 @@ body::before {
   }
 }
 
-.theme-dark .cm-cursor {
+body.nc-crt-enabled .cm-cursor {
   border-left: none !important;
   border-color: #FFFFFF !important;
   background-color: #FFFFFF;
@@ -133,14 +138,13 @@ body::before {
   animation: dos-cursor-blink 1s step-end infinite;
 }
 
-/* ---- Slight screen curvature hint (subtle) ---- */
+/* ---- Screen curvature hint ---- */
 
-.theme-dark .workspace {
-  /* Very subtle barrel distortion feel via padding gradient */
+body.nc-crt-enabled .workspace {
   box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.15);
 }
 
-/* ---- Flicker animation (very subtle, periodic) ---- */
+/* ---- Flicker animation ---- */
 
 @keyframes crt-flicker {
   0% { opacity: 1; }
@@ -150,20 +154,20 @@ body::before {
   100% { opacity: 1; }
 }
 
-.theme-dark .workspace {
+body.nc-crt-enabled .workspace {
   animation: crt-flicker 8s linear infinite;
 }
 
-/* ---- Reduce effects on modals for readability ---- */
+/* ---- Disable effects on modals ---- */
 
-.theme-dark .modal,
-.theme-dark .prompt {
+body.nc-crt-enabled .modal,
+body.nc-crt-enabled .prompt {
   text-shadow: none;
   filter: none;
 }
 
-.theme-dark .modal *,
-.theme-dark .prompt * {
+body.nc-crt-enabled .modal *,
+body.nc-crt-enabled .prompt * {
   filter: none !important;
   text-shadow: none !important;
 }
