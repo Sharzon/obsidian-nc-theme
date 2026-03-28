@@ -1,0 +1,22 @@
+/* ============================================
+   Scrollbar
+   ============================================ */
+
+.theme-dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-dark ::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 4px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover,
+.theme-dark ::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-active-thumb-bg);
+}

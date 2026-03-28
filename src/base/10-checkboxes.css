@@ -1,0 +1,23 @@
+/* ============================================
+   Checkboxes
+   ============================================ */
+
+.theme-dark input[type="checkbox"] {
+  border-color: var(--checkbox-border-color);
+  border-radius: var(--checkbox-radius);
+}
+
+.theme-dark input[type="checkbox"]:hover {
+  border-color: var(--checkbox-border-color-hover);
+}
+
+.theme-dark input[type="checkbox"]:checked {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+/* Completed task text */
+.theme-dark .task-list-item.is-checked .task-list-item-checkbox ~ * {
+  color: var(--checklist-done-color);
+  text-decoration: line-through;
+}

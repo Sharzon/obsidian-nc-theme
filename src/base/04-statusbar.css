@@ -1,0 +1,17 @@
+/* ============================================
+   Status Bar — нижняя панель (F-key бар NC)
+   ============================================ */
+
+.theme-dark .status-bar {
+  background-color: var(--status-bar-background);
+  border-top: 1px solid var(--status-bar-border-color);
+  color: var(--status-bar-text-color);
+}
+
+.theme-dark .status-bar-item {
+  color: var(--status-bar-text-color);
+}
+
+.theme-dark .status-bar-item:hover {
+  color: var(--text-normal);
+}

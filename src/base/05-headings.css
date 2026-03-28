@@ -1,0 +1,38 @@
+/* ============================================
+   Headings — H1–H6
+   ============================================ */
+
+.theme-dark .markdown-rendered h1,
+.theme-dark .cm-header-1 {
+  color: var(--h1-color);
+}
+
+.theme-dark .markdown-rendered h2,
+.theme-dark .cm-header-2 {
+  color: var(--h2-color);
+}
+
+.theme-dark .markdown-rendered h3,
+.theme-dark .cm-header-3 {
+  color: var(--h3-color);
+}
+
+.theme-dark .markdown-rendered h4,
+.theme-dark .cm-header-4 {
+  color: var(--h4-color);
+}
+
+.theme-dark .markdown-rendered h5,
+.theme-dark .cm-header-5 {
+  color: var(--h5-color);
+}
+
+.theme-dark .markdown-rendered h6,
+.theme-dark .cm-header-6 {
+  color: var(--h6-color);
+}
+
+/* Inline title */
+.theme-dark .inline-title {
+  color: var(--inline-title-color);
+}

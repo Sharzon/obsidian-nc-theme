@@ -1,0 +1,64 @@
+/* ============================================
+   Modals / Dialogs
+   ============================================ */
+
+.theme-dark .modal {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .modal-title {
+  color: var(--h1-color);
+}
+
+.theme-dark .modal-close-button {
+  color: var(--text-faint);
+}
+
+.theme-dark .modal-close-button:hover {
+  color: var(--text-error);
+}
+
+/* Prompt / Command palette */
+.theme-dark .prompt {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--prompt-border-color);
+}
+
+.theme-dark .prompt-input {
+  background-color: var(--background-modifier-form-field);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .suggestion-item {
+  color: var(--text-normal);
+}
+
+.theme-dark .suggestion-item.is-selected {
+  background-color: var(--nav-item-background-active);
+  color: var(--interactive-accent);
+}
+
+/* Settings */
+.theme-dark .setting-item {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .setting-item-name {
+  color: var(--text-normal);
+}
+
+.theme-dark .setting-item-description {
+  color: var(--text-muted);
+}
+
+/* Buttons */
+.theme-dark button.mod-cta {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.theme-dark button.mod-cta:hover {
+  background-color: var(--interactive-accent-hover);
+}

@@ -1,0 +1,22 @@
+/* ============================================
+   Blockquotes
+   ============================================ */
+
+.theme-dark blockquote,
+.theme-dark .markdown-rendered blockquote {
+  border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  background-color: rgba(0, 0, 0, 0.15);
+  color: var(--text-muted);
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+}
+
+/* Callouts */
+.theme-dark .callout {
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .callout-title {
+  color: var(--h2-color);
+}

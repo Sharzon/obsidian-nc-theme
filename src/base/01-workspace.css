@@ -1,0 +1,28 @@
+/* ============================================
+   Workspace — основная область редактора
+   ============================================ */
+
+.theme-dark {
+  color-scheme: dark;
+}
+
+/* Workspace background */
+.theme-dark .workspace {
+  background-color: var(--background-primary);
+}
+
+/* Editor area */
+.theme-dark .markdown-source-view,
+.theme-dark .markdown-reading-view {
+  color: var(--text-normal);
+}
+
+/* Horizontal rule */
+.theme-dark hr {
+  border-color: var(--hr-color);
+}
+
+/* Selection */
+.theme-dark ::selection {
+  background-color: var(--text-selection);
+}

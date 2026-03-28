@@ -1,0 +1,169 @@
+/* ============================================
+   NC Theme CRT — CRT Monitor Effects
+   "DOS на ЭЛТ-мониторе" — scanlines, glow, vignette
+   ============================================ */
+
+/* ---- Font: DOS VGA ---- */
+
+.theme-dark {
+  --font-text-theme: "Perfect DOS VGA 437", "Courier New", "Consolas", monospace;
+  --font-interface-theme: "Perfect DOS VGA 437", "Courier New", "Consolas", monospace;
+  --font-monospace-theme: "Perfect DOS VGA 437", "Courier New", "Consolas", monospace;
+}
+
+/* ---- Scanlines overlay ---- */
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(0, 0, 0, 0.12) 1px,
+    rgba(0, 0, 0, 0.12) 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ---- Vignette (darkened edges) ---- */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ---- Text glow (phosphor emission) ---- */
+
+/* Main content glow — subtle */
+.theme-dark .markdown-source-view,
+.theme-dark .markdown-reading-view,
+.theme-dark .markdown-rendered {
+  text-shadow: 0 0 1px currentColor;
+}
+
+/* Headings: slightly more glow, but not blinding */
+.theme-dark .markdown-rendered h1,
+.theme-dark .markdown-rendered h2,
+.theme-dark .markdown-rendered h3,
+.theme-dark .inline-title,
+.theme-dark .cm-header {
+  text-shadow: 0 0 2px currentColor;
+}
+
+/* Navigation glow */
+.theme-dark .nav-file-title,
+.theme-dark .nav-folder-title {
+  text-shadow: 0 0 1px currentColor;
+}
+
+/* Active nav: subtle glow */
+.theme-dark .nav-file-title.is-active {
+  text-shadow: 0 0 2px currentColor;
+}
+
+/* Status bar glow */
+.theme-dark .status-bar {
+  text-shadow: 0 0 1px #00AAAA;
+}
+
+/* Tab glow */
+.theme-dark .workspace-tab-header.is-active {
+  text-shadow: 0 0 1px currentColor;
+}
+
+/* Code glow */
+.theme-dark pre code {
+  text-shadow: 0 0 1px currentColor;
+}
+
+/* Links glow */
+.theme-dark a {
+  text-shadow: 0 0 1px currentColor;
+}
+
+/* ---- Phosphor bleed (slight blur on text edges) ---- */
+
+.theme-dark .markdown-source-view .cm-line,
+.theme-dark .markdown-rendered p,
+.theme-dark .markdown-rendered li,
+.theme-dark .markdown-rendered blockquote {
+  filter: blur(0.2px);
+}
+
+/* Headings: slightly more bleed */
+.theme-dark .markdown-rendered h1,
+.theme-dark .markdown-rendered h2,
+.theme-dark .inline-title {
+  filter: blur(0.3px);
+}
+
+/* ---- DOS block cursor blink ---- */
+
+@keyframes dos-cursor-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.theme-dark .cm-cursor {
+  border-left: none !important;
+  border-color: #FFFFFF !important;
+  background-color: #FFFFFF;
+  width: 0.6em !important;
+  animation: dos-cursor-blink 1s step-end infinite;
+}
+
+/* ---- Slight screen curvature hint (subtle) ---- */
+
+.theme-dark .workspace {
+  /* Very subtle barrel distortion feel via padding gradient */
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Flicker animation (very subtle, periodic) ---- */
+
+@keyframes crt-flicker {
+  0% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.97; }
+  94% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.theme-dark .workspace {
+  animation: crt-flicker 8s linear infinite;
+}
+
+/* ---- Reduce effects on modals for readability ---- */
+
+.theme-dark .modal,
+.theme-dark .prompt {
+  text-shadow: none;
+  filter: none;
+}
+
+.theme-dark .modal *,
+.theme-dark .prompt * {
+  filter: none !important;
+  text-shadow: none !important;
+}

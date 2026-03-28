@@ -1,0 +1,29 @@
+/* ============================================
+   Text Formatting — bold, italic, highlight
+   ============================================ */
+
+/* Bold */
+.theme-dark strong,
+.theme-dark .cm-strong {
+  color: var(--bold-color);
+}
+
+/* Italic */
+.theme-dark em,
+.theme-dark .cm-em {
+  color: var(--italic-color);
+}
+
+/* Highlight / Mark */
+.theme-dark mark,
+.theme-dark .markdown-rendered mark {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-highlight-fg);
+  padding: 1px 3px;
+}
+
+/* Strikethrough */
+.theme-dark del,
+.theme-dark .cm-strikethrough {
+  color: var(--text-faint);
+}

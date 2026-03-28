@@ -1,0 +1,71 @@
+/* ============================================
+   Code Blocks
+   ============================================ */
+
+/* Inline code */
+.theme-dark code {
+  color: var(--code-normal);
+  background-color: var(--code-background);
+}
+
+/* Code blocks */
+.theme-dark pre {
+  background-color: #000000 !important;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark pre code {
+  color: var(--code-normal);
+  background-color: transparent;
+}
+
+/* Syntax highlighting */
+.theme-dark .cm-s-obsidian .cm-comment,
+.theme-dark .token.comment {
+  color: var(--code-comment);
+}
+
+.theme-dark .cm-s-obsidian .cm-keyword,
+.theme-dark .token.keyword {
+  color: var(--code-keyword);
+}
+
+.theme-dark .cm-s-obsidian .cm-string,
+.theme-dark .token.string {
+  color: var(--code-string);
+}
+
+.theme-dark .cm-s-obsidian .cm-number,
+.theme-dark .token.number {
+  color: var(--code-value);
+}
+
+.theme-dark .cm-s-obsidian .cm-def,
+.theme-dark .token.function {
+  color: var(--code-function);
+}
+
+.theme-dark .cm-s-obsidian .cm-property,
+.theme-dark .token.property {
+  color: var(--code-property);
+}
+
+.theme-dark .cm-s-obsidian .cm-operator,
+.theme-dark .token.operator {
+  color: var(--code-operator);
+}
+
+.theme-dark .cm-s-obsidian .cm-tag,
+.theme-dark .token.tag {
+  color: var(--code-tag);
+}
+
+/* Copy code button */
+.theme-dark .copy-code-button {
+  color: var(--text-faint);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .copy-code-button:hover {
+  color: var(--text-normal);
+}

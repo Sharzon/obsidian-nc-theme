@@ -1,0 +1,23 @@
+/* ============================================
+   Lists
+   ============================================ */
+
+/* Unordered list markers */
+.theme-dark .markdown-rendered ul > li::marker {
+  color: var(--text-muted);
+}
+
+/* Ordered list markers */
+.theme-dark .markdown-rendered ol > li::marker {
+  color: var(--text-muted);
+}
+
+/* List item spacing */
+.theme-dark .markdown-rendered li {
+  margin-bottom: 2px;
+}
+
+/* Indentation guide for nested lists in live preview */
+.theme-dark .cm-indent::before {
+  border-color: var(--nav-indentation-guide-color);
+}

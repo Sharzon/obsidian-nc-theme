@@ -1,0 +1,34 @@
+/* ============================================
+   Search
+   ============================================ */
+
+/* Search input */
+.theme-dark .search-input-container input {
+  background-color: var(--background-modifier-form-field);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Search results highlight */
+.theme-dark .search-result-file-matched-text {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-highlight-fg);
+}
+
+/* Matched text in editor */
+.theme-dark .cm-highlight {
+  background-color: var(--text-highlight-bg);
+}
+
+/* Search result items */
+.theme-dark .search-result-file-title {
+  color: var(--h2-color);
+}
+
+.theme-dark .search-result-file-match {
+  color: var(--text-normal);
+}
+
+.theme-dark .search-result-file-match:hover {
+  background-color: var(--nav-item-background-hover);
+}

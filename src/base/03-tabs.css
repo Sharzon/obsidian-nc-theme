@@ -1,0 +1,34 @@
+/* ============================================
+   Tabs — вкладки (заголовок панели NC)
+   ============================================ */
+
+/* Tab container */
+.theme-dark .workspace-tab-header-container {
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* Individual tab */
+.theme-dark .workspace-tab-header {
+  color: var(--tab-text-color);
+}
+
+.theme-dark .workspace-tab-header:hover {
+  color: var(--tab-text-color-focused);
+}
+
+/* Active tab */
+.theme-dark .workspace-tab-header.is-active {
+  color: var(--tab-text-color-focused-active-current);
+  background-color: var(--tab-background-active);
+  border-bottom: 2px solid var(--interactive-accent);
+}
+
+/* Tab close button */
+.theme-dark .workspace-tab-header-close-button {
+  color: var(--text-faint);
+}
+
+.theme-dark .workspace-tab-header-close-button:hover {
+  color: var(--text-error);
+}

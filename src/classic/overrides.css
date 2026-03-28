@@ -1,0 +1,427 @@
+/* ============================================
+   NC Theme Classic — Structural Overrides
+   Box-drawing, F-key bar, NC panel styling
+   ============================================ */
+
+/* ---- Global: sharp edges, no shadows ---- */
+
+.theme-dark {
+  --input-shadow: none;
+  --input-shadow-hover: none;
+}
+
+.theme-dark * {
+  border-radius: 0 !important;
+}
+
+/* ---- Sidebar as NC file panel ---- */
+
+/* NC-style panel border */
+.theme-dark .workspace-split.mod-left-split {
+  border-right: 2px solid var(--background-modifier-border);
+}
+
+/* Active file: yellow on blue (NC selected item) */
+.theme-dark .nav-file-title.is-active {
+  color: var(--interactive-accent);
+  background-color: var(--background-primary);
+  font-weight: bold;
+}
+
+/* Folder names: bold, uppercase */
+.theme-dark .nav-folder-title {
+  color: var(--bold-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.theme-dark .nav-folder-title .nav-folder-title-content {
+  color: var(--bold-color);
+}
+
+/* Hover: yellow on light blue */
+.theme-dark .nav-file-title:hover {
+  color: var(--interactive-accent);
+  background-color: #5555FF;
+}
+
+/* ---- Tabs as NC panel header ---- */
+
+/* Tab container: cyan border bottom */
+.theme-dark .workspace-tab-header-container {
+  background-color: #000000;
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+
+/* Active tab: box-drawing style decorations */
+.theme-dark .workspace-tab-header.is-active {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-bottom: none;
+  position: relative;
+}
+
+/* Box-drawing corners on active tab */
+.theme-dark .workspace-tab-header.is-active::before {
+  content: "\250C";
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  color: var(--background-modifier-border);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.theme-dark .workspace-tab-header.is-active::after {
+  content: "\2510";
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  color: var(--background-modifier-border);
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* Inactive tabs */
+.theme-dark .workspace-tab-header:not(.is-active) {
+  background-color: #000000;
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+
+/* ---- Status bar as F-key bar ---- */
+
+.theme-dark .status-bar {
+  background-color: #000000;
+  border-top: 1px solid var(--background-modifier-border);
+  color: var(--background-modifier-border);
+  font-family: monospace;
+}
+
+/* Dividers between status items */
+.theme-dark .status-bar-item {
+  color: var(--text-normal);
+  border-right: 1px solid var(--background-modifier-border);
+  padding: 0 8px;
+}
+
+.theme-dark .status-bar-item:last-child {
+  border-right: none;
+}
+
+.theme-dark .status-bar-item:hover {
+  color: var(--interactive-accent);
+  background-color: #000088;
+}
+
+/* ---- Modals as NC dialogs ---- */
+
+/* All modals: NC dialog style (серый фон, чёрный текст) */
+.theme-dark .modal {
+  background-color: #AAAAAA !important;
+  color: #000000 !important;
+  border: 2px solid #00AAAA;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.theme-dark .modal-title {
+  color: #000000 !important;
+  background-color: #00AAAA;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.theme-dark .modal-content {
+  color: #000000 !important;
+  background-color: #AAAAAA !important;
+}
+
+/* Settings modal: left sidebar + right content */
+.theme-dark .vertical-tab-header {
+  background-color: #999999 !important;
+  border-right: 2px solid #00AAAA;
+}
+
+.theme-dark .vertical-tab-header-group-title {
+  color: #006666 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.theme-dark .vertical-tab-nav-item {
+  color: #000000 !important;
+}
+
+.theme-dark .vertical-tab-nav-item:hover {
+  color: #000000 !important;
+  background-color: #BBBBBB !important;
+}
+
+.theme-dark .vertical-tab-nav-item.is-active {
+  color: #000000 !important;
+  background-color: #00AAAA !important;
+  font-weight: bold;
+}
+
+/* Settings right panel — kill ALL blue backgrounds inside */
+.theme-dark .vertical-tab-content {
+  background-color: #AAAAAA !important;
+  color: #000000 !important;
+}
+
+.theme-dark .vertical-tab-content-container {
+  background-color: #AAAAAA !important;
+}
+
+/* Nuclear option: every div/section inside settings must be gray */
+.theme-dark .vertical-tab-content *,
+.theme-dark .vertical-tab-content-container * {
+  background-color: transparent !important;
+  color: #000000;
+}
+
+/* Re-apply specific backgrounds where needed */
+.theme-dark .vertical-tab-content select,
+.theme-dark .vertical-tab-content input[type="text"],
+.theme-dark .vertical-tab-content .search-input-container input {
+  background-color: #000000 !important;
+  color: #90C0C0 !important;
+}
+
+.theme-dark .vertical-tab-content button {
+  background-color: #00AAAA !important;
+  color: #000000 !important;
+}
+
+.theme-dark .vertical-tab-content button:hover {
+  background-color: #55CCCC !important;
+}
+
+/* Toggle switches need their own bg */
+.theme-dark .vertical-tab-content .checkbox-container {
+  background-color: #666666 !important;
+}
+
+.theme-dark .vertical-tab-content .checkbox-container.is-enabled {
+  background-color: #00AAAA !important;
+}
+
+/* Setting items */
+.theme-dark .modal .setting-item-name,
+.theme-dark .setting-item-name {
+  color: #000000 !important;
+}
+
+.theme-dark .modal .setting-item-description,
+.theme-dark .setting-item-description {
+  color: #444444 !important;
+}
+
+.theme-dark .modal .setting-item,
+.theme-dark .setting-item {
+  border-bottom: 1px solid #888888 !important;
+}
+
+/* Section headings (Account, Links, etc.) */
+.theme-dark .setting-item-heading .setting-item-name {
+  color: #006666 !important;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Links inside settings descriptions */
+.theme-dark .vertical-tab-content a,
+.theme-dark .modal-content a {
+  color: #006666 !important;
+  text-decoration: underline;
+}
+
+.theme-dark .vertical-tab-content a:hover,
+.theme-dark .modal-content a:hover {
+  color: #008888 !important;
+}
+
+/* Icons in settings nav — make visible on gray */
+.theme-dark .vertical-tab-nav-item .svg-icon,
+.theme-dark .modal .nav-action-button .svg-icon,
+.theme-dark .modal .clickable-icon .svg-icon {
+  color: #333333 !important;
+}
+
+/* Dropdowns and inputs in settings */
+.theme-dark .modal select,
+.theme-dark .vertical-tab-content select {
+  background-color: #000000 !important;
+  color: var(--text-normal) !important;
+  border: 1px solid #00AAAA !important;
+}
+
+.theme-dark .modal input[type="text"],
+.theme-dark .vertical-tab-content input[type="text"] {
+  background-color: #000000 !important;
+  color: var(--text-normal) !important;
+  border: 1px solid #00AAAA !important;
+}
+
+/* Toggle switches */
+.theme-dark .modal .checkbox-container.is-enabled {
+  background-color: #00AAAA !important;
+}
+
+/* Modal buttons: cyan with black text */
+.theme-dark .modal button {
+  background-color: #00AAAA;
+  color: #000000;
+  border: 1px solid #006666;
+  font-weight: bold;
+}
+
+.theme-dark .modal button:hover {
+  background-color: #55CCCC;
+}
+
+.theme-dark .modal button.mod-cta {
+  background-color: #00AAAA;
+  color: #000000;
+}
+
+/* Modal close button */
+.theme-dark .modal-close-button {
+  color: #333333 !important;
+}
+
+.theme-dark .modal-close-button:hover {
+  color: #AA0000 !important;
+}
+
+/* Separator lines in settings */
+.theme-dark .modal hr,
+.theme-dark .vertical-tab-content hr {
+  border-color: #888888 !important;
+}
+
+/* Command palette */
+.theme-dark .prompt {
+  background-color: #AAAAAA !important;
+  border: 2px solid #00AAAA;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.theme-dark .prompt-input {
+  background-color: #000000 !important;
+  color: var(--text-normal) !important;
+  border: 1px solid #00AAAA !important;
+}
+
+.theme-dark .suggestion-item {
+  color: #000000 !important;
+}
+
+.theme-dark .suggestion-item.is-selected {
+  background-color: #00AAAA !important;
+  color: #000000 !important;
+}
+
+/* Prompt instructions bar (↑↓ to navigate, etc.) */
+.theme-dark .prompt-instructions {
+  background-color: #000000 !important;
+  border-top: 1px solid #00AAAA !important;
+}
+
+.theme-dark .prompt-instruction-command {
+  color: #90C0C0 !important;
+}
+
+.theme-dark .prompt-instruction {
+  color: #88A0B8 !important;
+}
+
+/* ---- Lists: markers ---- */
+
+.theme-dark .markdown-rendered ul > li::marker {
+  content: "\25BA ";
+  color: var(--background-modifier-border);
+}
+
+/* ---- Tables: sharp cyan borders ---- */
+
+.theme-dark table {
+  border: 2px solid var(--background-modifier-border);
+}
+
+.theme-dark th {
+  background-color: #000088;
+  color: var(--h2-color);
+  border: 1px solid var(--background-modifier-border);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.theme-dark td {
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* ---- Scrollbar: DOS style ---- */
+
+.theme-dark ::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000088;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  background-color: var(--background-modifier-border);
+  border: 1px solid #000088;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--h1-color);
+}
+
+/* ---- Code blocks: terminal style ---- */
+
+.theme-dark pre {
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* ---- Headings: H1 uppercase in Classic ---- */
+
+.theme-dark .markdown-rendered h1,
+.theme-dark .inline-title {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Search: yellow on blue highlight ---- */
+
+.theme-dark .search-result-file-matched-text {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-highlight-fg);
+}
+
+/* ---- Blockquotes: cyan left border on dark ---- */
+
+.theme-dark blockquote,
+.theme-dark .markdown-rendered blockquote {
+  background-color: #000088;
+  border-left: 3px solid var(--background-modifier-border);
+  color: var(--text-muted);
+}
+
+/* ---- Graph: black background ---- */
+
+.theme-dark .graph-view canvas {
+  background-color: #000000 !important;
+}
+
+/* ---- Checkboxes: square brackets style ---- */
+
+.theme-dark input[type="checkbox"] {
+  border: 2px solid var(--background-modifier-border);
+  background-color: #000000;
+}
+
+.theme-dark input[type="checkbox"]:checked {
+  background-color: var(--background-modifier-border);
+  border-color: var(--background-modifier-border);
+}

@@ -1,0 +1,45 @@
+/* ============================================
+   Sidebar — навигация файлов (панель NC)
+   ============================================ */
+
+/* Sidebar container */
+.theme-dark .workspace-split.mod-left-split {
+  background-color: var(--background-secondary);
+}
+
+/* File explorer */
+.theme-dark .nav-folder-title {
+  color: var(--nav-item-color);
+  font-weight: bold;
+}
+
+.theme-dark .nav-file-title {
+  color: var(--nav-item-color);
+}
+
+.theme-dark .nav-file-title:hover,
+.theme-dark .nav-folder-title:hover {
+  color: var(--nav-item-color-hover);
+  background-color: var(--nav-item-background-hover);
+}
+
+.theme-dark .nav-file-title.is-active {
+  color: var(--nav-item-color-active);
+  background-color: var(--nav-item-background-active);
+}
+
+/* Vault title in sidebar */
+.theme-dark .nav-folder.mod-root > .nav-folder-title {
+  color: var(--h1-color);
+  font-weight: bold;
+}
+
+/* Collapse indicators */
+.theme-dark .nav-folder-collapse-indicator {
+  color: var(--nav-collapse-icon-color);
+}
+
+/* Indentation guides */
+.theme-dark .nav-folder-children {
+  border-left-color: var(--nav-indentation-guide-color);
+}

@@ -1,0 +1,212 @@
+/* ============================================
+   NC Theme Classic — CSS Variables
+   "Это NC" — точные CGA-цвета, узнаваемая палитра
+   ============================================ */
+
+.theme-dark {
+  /* Accent (yellow #FFFF55) */
+  --accent-h: 60;
+  --accent-s: 100%;
+  --accent-l: 67%;
+
+  /* CGA Palette reference:
+     #000000 Black       #555555 Dark Gray
+     #0000AA Blue        #5555FF Light Blue
+     #00AA00 Green       #55FF55 Light Green
+     #00AAAA Cyan        #55FFFF Light Cyan
+     #AA0000 Red         #FF5555 Light Red
+     #AA00AA Magenta     #FF55FF Light Magenta
+     #AA5500 Brown       #FFFF55 Yellow
+     #AAAAAA Light Gray  #FFFFFF White
+  */
+
+  /* Global Obsidian color palette (used by Canvas, callouts, etc.)
+     Mapped to our actual theme colors */
+  --color-red-rgb: 255, 119, 119;
+  --color-red: #FF7777;           /* ошибки */
+  --color-orange-rgb: 212, 160, 90;
+  --color-orange: #D4A05A;        /* тёплый акцент */
+  --color-yellow-rgb: 212, 200, 90;
+  --color-yellow: #D4C85A;        /* акцент (selected) */
+  --color-green-rgb: 112, 221, 112;
+  --color-green: #70DD70;         /* успех, код */
+  --color-cyan-rgb: 0, 170, 170;
+  --color-cyan: #00AAAA;          /* рамки, бордеры */
+  --color-blue-rgb: 85, 85, 255;
+  --color-blue: #5555FF;          /* подсветка */
+  --color-purple-rgb: 170, 0, 170;
+  --color-purple: #AA00AA;        /* magenta */
+  --color-pink-rgb: 160, 216, 216;
+  --color-pink: #A0D8D8;          /* ссылки */
+
+  /* Canvas */
+  --canvas-dot-pattern: #88A0B8;
+
+  /* Backgrounds */
+  --background-primary: #0000AA;
+  --background-primary-alt: #0000AA;
+  --background-secondary: #0000AA;
+  --background-secondary-alt: #000088;
+  --background-modifier-border: #00AAAA;
+  --background-modifier-form-field: #000000;
+  --background-modifier-form-field-highlighted: #000088;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
+  --background-modifier-success: #00AA00;
+  --background-modifier-error: #AA0000;
+  --background-modifier-error-rgb: 170, 0, 0;
+  --background-modifier-error-hover: #FF5555;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+
+  /* Text — смягчённая палитра (Вариант A) */
+  --text-normal: #90C0C0;
+  --text-muted: #88A0B8;
+  --text-faint: #7A9AB8;
+  --text-on-accent: #000000;
+  --text-on-accent-inverted: #D4C85A;
+  --text-error: #FF7777;
+  --text-error-hover: #FF9999;
+  --text-success: #70DD70;
+  --text-selection: rgba(212, 200, 90, 0.3);
+  --text-highlight-bg: #D4C85A;
+  --text-highlight-fg: #0000AA;
+  --text-accent: #D4C85A;
+  --text-accent-hover: #E0D060;
+
+  /* Interactive elements */
+  --interactive-normal: #000088;
+  --interactive-hover: #5555FF;
+  --interactive-accent: #D4C85A;
+  --interactive-accent-rgb: 212, 200, 90;
+  --interactive-accent-hover: #E0D060;
+
+  /* Headings */
+  --h1-color: #B0D8D0;
+  --h2-color: #90C0B8;
+  --h3-color: #88A0B8;
+  --h4-color: #88A0B8;
+  --h5-color: #7A9AB8;
+  --h6-color: #7A9AB8;
+  --inline-title-color: #B0D8D0;
+
+  /* Links */
+  --link-color: #A0D8D8;
+  --link-color-hover: #D4C85A;
+  --link-external-color: #A0D8D8;
+  --link-external-color-hover: #D4C85A;
+  --link-unresolved-color: #AA00AA;
+  --link-unresolved-opacity: 1;
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+
+  /* Bold / Italic */
+  --bold-color: #98C8C0;
+  --italic-color: #A0D8D8;
+
+  /* Tags — no background, just colored text */
+  --tag-color: #00AAAA;
+  --tag-background: transparent;
+  --tag-background-hover: transparent;
+  --tag-padding-x: 0;
+  --tag-padding-y: 0;
+  --tag-radius: 0px;
+  --tag-decoration: none;
+
+  /* Code */
+  --code-normal: #90C0C0;
+  --code-background: #000000;
+  --code-comment: #7A9AB8;
+  --code-function: #D4C85A;
+  --code-keyword: #FF7777;
+  --code-string: #70DD70;
+  --code-value: #D4C85A;
+  --code-operator: #88A0B8;
+  --code-property: #A0D8D8;
+  --code-tag: #FF7777;
+  --code-important: #D4C85A;
+
+  /* Tables */
+  --table-header-background: #000088;
+  --table-header-background-hover: #5555FF;
+  --table-row-even-background: #0000AA;
+  --table-row-odd-background: #000088;
+  --table-row-background-hover: #5555FF;
+
+  /* Checkboxes */
+  --checkbox-color: #00AAAA;
+  --checkbox-color-hover: #55FFFF;
+  --checkbox-border-color: #00AAAA;
+  --checkbox-border-color-hover: #55FFFF;
+  --checklist-done-color: #7A9AB8;
+  --checkbox-radius: 0px;
+
+  /* Navigation */
+  --nav-item-color: #90C0C0;
+  --nav-item-color-hover: #D4C85A;
+  --nav-item-color-active: #D4C85A;
+  --nav-item-background-hover: #5555FF;
+  --nav-item-background-active: #0000AA;
+  --nav-collapse-icon-color: #00AAAA;
+  --nav-indentation-guide-color: #00AAAA;
+
+  /* Tabs */
+  --tab-text-color: #88A0B8;
+  --tab-text-color-focused: #90C0C0;
+  --tab-text-color-focused-active: #A0D8D8;
+  --tab-text-color-focused-active-current: #D4C85A;
+  --tab-background-active: #0000AA;
+  --tab-outline-color: #00AAAA;
+
+  /* Scrollbar */
+  --scrollbar-bg: #000088;
+  --scrollbar-thumb-bg: #00AAAA;
+  --scrollbar-active-thumb-bg: #55FFFF;
+
+  /* Graph */
+  --graph-line: #555555;
+  --graph-node: #00AAAA;
+  --graph-node-focused: #D4C85A;
+  --graph-node-tag: #FF7777;
+  --graph-node-attachment: #70DD70;
+  --graph-node-unresolved: #7A9AB8;
+
+  /* Blockquote */
+  --blockquote-border-color: #00AAAA;
+  --blockquote-border-thickness: 3px;
+
+  /* Cursor */
+  --cursor-line-background: rgba(85, 85, 255, 0.2);
+
+  /* Divider */
+  --hr-color: #00AAAA;
+
+  /* Flashing */
+  --flashing-background: rgba(255, 255, 85, 0.3);
+
+  /* Titlebar */
+  --titlebar-background: #000000;
+  --titlebar-background-focused: #000000;
+  --titlebar-text-color: #88A0B8;
+  --titlebar-text-color-focused: #A0D8D8;
+
+  /* Status bar */
+  --status-bar-background: #000000;
+  --status-bar-border-color: #00AAAA;
+  --status-bar-text-color: #00AAAA;
+
+  /* Prompt / modal */
+  --prompt-border-color: #00AAAA;
+
+  /* Ribbon */
+  --ribbon-background: #000000;
+
+  /* Radius — Classic has NO rounding */
+  --radius-s: 0px;
+  --radius-m: 0px;
+  --radius-l: 0px;
+
+  /* Input */
+  --input-shadow: none;
+  --input-shadow-hover: none;
+}

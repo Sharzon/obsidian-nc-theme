@@ -1,0 +1,40 @@
+/* ============================================
+   Links
+   ============================================ */
+
+/* Internal links */
+.theme-dark .internal-link {
+  color: var(--link-color);
+  text-decoration: var(--link-decoration);
+}
+
+.theme-dark .internal-link:hover {
+  color: var(--link-color-hover);
+  text-decoration: var(--link-decoration-hover);
+}
+
+/* External links */
+.theme-dark .external-link {
+  color: var(--link-external-color);
+  text-decoration: var(--link-external-decoration);
+}
+
+.theme-dark .external-link:hover {
+  color: var(--link-external-color-hover);
+  text-decoration: var(--link-external-decoration-hover);
+}
+
+/* Unresolved links */
+.theme-dark .is-unresolved {
+  color: var(--link-unresolved-color);
+  opacity: var(--link-unresolved-opacity);
+}
+
+/* URL in source view */
+.theme-dark .cm-url {
+  color: var(--text-faint);
+}
+
+.theme-dark .cm-link {
+  color: var(--link-color);
+}

@@ -1,0 +1,37 @@
+/* ============================================
+   Tables
+   ============================================ */
+
+.theme-dark table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.theme-dark th {
+  background-color: var(--table-header-background);
+  color: var(--h2-color);
+  font-weight: bold;
+  border: 1px solid var(--background-modifier-border);
+  padding: 6px 10px;
+}
+
+.theme-dark th:hover {
+  background-color: var(--table-header-background-hover);
+}
+
+.theme-dark td {
+  border: 1px solid var(--background-modifier-border);
+  padding: 6px 10px;
+}
+
+.theme-dark tr:nth-child(even) {
+  background-color: var(--table-row-even-background);
+}
+
+.theme-dark tr:nth-child(odd) {
+  background-color: var(--table-row-odd-background);
+}
+
+.theme-dark tr:hover {
+  background-color: var(--table-row-background-hover);
+}

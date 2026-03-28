@@ -1,0 +1,120 @@
+/* ============================================
+   Misc — tooltips, ribbon, misc UI
+   ============================================ */
+
+/* Ribbon (left icon bar) */
+.theme-dark .side-dock-ribbon {
+  background-color: var(--ribbon-background);
+}
+
+.theme-dark .side-dock-ribbon-action {
+  color: var(--text-faint);
+}
+
+.theme-dark .side-dock-ribbon-action:hover {
+  color: var(--text-normal);
+}
+
+/* Tooltip */
+.theme-dark .tooltip {
+  background-color: var(--background-secondary-alt);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Empty state */
+.theme-dark .empty-state-title {
+  color: var(--h1-color);
+}
+
+.theme-dark .empty-state-action {
+  color: var(--link-color);
+}
+
+/* File embed / transclusion */
+.theme-dark .markdown-embed {
+  border-left: 2px solid var(--interactive-accent);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Footnotes */
+.theme-dark .footnote-link {
+  color: var(--link-color);
+}
+
+/* Math blocks */
+.theme-dark mjx-container {
+  color: var(--text-normal);
+}
+
+/* ---- Canvas ---- */
+
+/* Dot pattern */
+.theme-dark {
+  --canvas-dot-pattern: var(--text-faint);
+}
+
+/* Canvas empty state text */
+.theme-dark .canvas-wrapper .canvas-background {
+  color: var(--text-muted);
+}
+
+/* Canvas control panels */
+.theme-dark .canvas-control-group {
+  background-color: #000000 !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .canvas-control-item {
+  color: var(--text-normal) !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .canvas-control-item:hover {
+  color: var(--interactive-accent) !important;
+  background-color: var(--background-secondary-alt) !important;
+}
+
+/* Canvas card/color menu */
+.theme-dark .canvas-card-menu {
+  background-color: #000000 !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .canvas-menu {
+  background-color: #000000 !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  box-shadow: none !important;
+}
+
+/* Canvas color picker items */
+.theme-dark .canvas-color-picker-item {
+  border: 1px solid var(--background-modifier-border) !important;
+}
+
+/* Canvas nodes */
+.theme-dark .canvas-node-container {
+  border-color: var(--background-modifier-border) !important;
+}
+
+.theme-dark .canvas-node.is-focused .canvas-node-container {
+  border-color: var(--interactive-accent) !important;
+  box-shadow: 0 0 4px rgba(var(--interactive-accent-rgb), 0.3) !important;
+}
+
+/* Canvas edges */
+.theme-dark .canvas-edge path {
+  stroke: var(--background-modifier-border) !important;
+}
+
+/* Canvas help button */
+.theme-dark .canvas-controls button {
+  background-color: #000000 !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  color: var(--text-normal) !important;
+  box-shadow: none !important;
+}

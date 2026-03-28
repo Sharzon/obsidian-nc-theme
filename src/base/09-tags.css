@@ -1,0 +1,23 @@
+/* ============================================
+   Tags
+   ============================================ */
+
+.theme-dark .tag,
+.theme-dark a.tag {
+  color: var(--tag-color);
+  background-color: var(--tag-background);
+  border-radius: var(--tag-radius);
+  padding: var(--tag-padding-y) var(--tag-padding-x);
+  text-decoration: var(--tag-decoration);
+}
+
+.theme-dark .tag:hover,
+.theme-dark a.tag:hover {
+  background-color: var(--tag-background-hover);
+  color: var(--link-color-hover);
+}
+
+/* Tag in source mode */
+.theme-dark .cm-hashtag {
+  color: var(--tag-color);
+}
