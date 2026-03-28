@@ -1246,7 +1246,11 @@
   color: #000000;
 }
 
-/* Modal close button */
+/* Modal close button — hide in settings (Esc to close), show in small modals */
+.theme-dark .mod-settings .modal-close-button {
+  display: none;
+}
+
 .theme-dark .modal-close-button {
   color: #333333 !important;
 }
