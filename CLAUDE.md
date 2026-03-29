@@ -20,7 +20,7 @@ Concatenates CSS from `src/` into `theme.css`. Order: variables → base → ove
 
 ## Rules
 
-- **No docs/**: do not create documentation markdown files in this project. Research goes to ai-vault.
+- **No docs/**: do not create documentation markdown files in this project.
 - **Always rebuild** after CSS changes: `bash build.sh`
 - Commit messages in English.
 - Check color contrast with tools, not by eye.

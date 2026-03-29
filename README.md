@@ -38,8 +38,6 @@ This enables:
 - Scanline overlay
 - Phosphor text glow
 - Screen vignette (darkened edges)
-- DOS block cursor with blink animation
-- Subtle screen flicker
 
 ## Installation
 

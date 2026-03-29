@@ -1594,20 +1594,6 @@ body.nc-crt-enabled .workspace {
   box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.15);
 }
 
-/* ---- Flicker animation ---- */
-
-@keyframes crt-flicker {
-  0% { opacity: 1; }
-  92% { opacity: 1; }
-  93% { opacity: 0.97; }
-  94% { opacity: 1; }
-  100% { opacity: 1; }
-}
-
-body.nc-crt-enabled .workspace {
-  animation: crt-flicker 8s linear infinite;
-}
-
 /* ---- Disable effects on modals ---- */
 
 body.nc-crt-enabled .modal,
