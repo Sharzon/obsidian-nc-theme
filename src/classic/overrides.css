@@ -344,7 +344,7 @@
 /* ---- Lists: markers ---- */
 
 .theme-dark .markdown-rendered ul > li::marker {
-  content: "\25BA ";
+  content: "\25BA  ";
   color: var(--background-modifier-border);
 }
 

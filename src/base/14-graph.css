@@ -42,10 +42,10 @@
   color: var(--text-muted);
 }
 
-/* Setting labels and descriptions */
+/* Setting labels and descriptions (override !important from overrides.css) */
 .theme-dark .graph-controls .setting-item-name,
 .theme-dark .graph-controls .setting-item-description {
-  color: var(--text-normal);
+  color: var(--text-normal) !important;
 }
 
 /* Tree item labels (collapsible sections) */

@@ -8,7 +8,23 @@
 }
 
 .theme-dark .markdown-rendered ul > li::marker {
-  content: "\25BA ";
+  content: "\25BA  ";
+  color: var(--text-muted);
+}
+
+/* Hide default bullet dot rendered by Obsidian */
+.theme-dark .markdown-rendered .list-bullet {
+  display: none;
+}
+
+/* Also hide in live preview */
+.theme-dark .cm-formatting-list-ul {
+  font-size: 0;
+}
+
+.theme-dark .cm-formatting-list-ul::after {
+  content: "\25BA  ";
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
