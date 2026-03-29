@@ -189,6 +189,20 @@
   color: #90C0C0 !important;
 }
 
+/* Sliders: restore track and thumb visibility */
+.theme-dark .vertical-tab-content input[type="range"] {
+  background-color: #666666 !important;
+}
+
+.theme-dark .vertical-tab-content input[type="range"]::-webkit-slider-thumb {
+  background: #00AAAA !important;
+  border-color: #006666 !important;
+}
+
+.theme-dark .vertical-tab-content input[type="range"]::-webkit-slider-thumb:hover {
+  background: #55CCCC !important;
+}
+
 .theme-dark .vertical-tab-content button {
   background-color: #00AAAA !important;
   color: #000000 !important;
@@ -207,19 +221,16 @@
   background-color: #00AAAA !important;
 }
 
-/* Setting items */
-.theme-dark .modal .setting-item-name,
-.theme-dark .setting-item-name {
+/* Setting items (only inside modals — sidebar has blue bg) */
+.theme-dark .modal .setting-item-name {
   color: #000000 !important;
 }
 
-.theme-dark .modal .setting-item-description,
-.theme-dark .setting-item-description {
+.theme-dark .modal .setting-item-description {
   color: #444444 !important;
 }
 
-.theme-dark .modal .setting-item,
-.theme-dark .setting-item {
+.theme-dark .modal .setting-item {
   border-bottom: 1px solid #888888 !important;
 }
 
@@ -230,16 +241,29 @@
   font-size: 1.1em;
 }
 
-/* Links inside settings descriptions */
+/* Links and accented text inside settings/modals (gray bg) */
 .theme-dark .vertical-tab-content a,
 .theme-dark .modal-content a {
-  color: #006666 !important;
+  color: #005555 !important;
   text-decoration: underline;
 }
 
 .theme-dark .vertical-tab-content a:hover,
 .theme-dark .modal-content a:hover {
-  color: #008888 !important;
+  color: #007777 !important;
+}
+
+/* Override CSS variables inside modals for gray bg contrast */
+.theme-dark .modal {
+  --text-normal: #222222;
+  --text-muted: #444444;
+  --text-faint: #555555;
+  --text-accent: #005555;
+  --text-accent-hover: #007777;
+  --link-color: #005555;
+  --link-color-hover: #007777;
+  --tag-color: #005555;
+  --background-modifier-border: #888888;
 }
 
 /* Icons in settings nav — make visible on gray */
@@ -249,18 +273,18 @@
   color: #333333 !important;
 }
 
-/* Dropdowns and inputs in settings */
+/* Dropdowns and inputs in settings (dark bg — need light text) */
 .theme-dark .modal select,
 .theme-dark .vertical-tab-content select {
   background-color: #000000 !important;
-  color: var(--text-normal) !important;
+  color: #90C0C0 !important;
   border: 1px solid #00AAAA !important;
 }
 
 .theme-dark .modal input[type="text"],
 .theme-dark .vertical-tab-content input[type="text"] {
   background-color: #000000 !important;
-  color: var(--text-normal) !important;
+  color: #90C0C0 !important;
   border: 1px solid #00AAAA !important;
 }
 
@@ -318,13 +342,24 @@
   border: 1px solid #00AAAA !important;
 }
 
-.theme-dark .suggestion-item {
+/* Suggestion items in prompt (gray bg) */
+.theme-dark .prompt .suggestion-item {
   color: #000000 !important;
 }
 
-.theme-dark .suggestion-item.is-selected {
+.theme-dark .prompt .suggestion-item.is-selected {
   background-color: #00AAAA !important;
   color: #000000 !important;
+}
+
+/* Suggestion dropdowns elsewhere (blue bg) */
+.theme-dark .suggestion-container:not(.mod-search-suggestion) .suggestion-item {
+  color: #90C0C0 !important;
+}
+
+.theme-dark .suggestion-container:not(.mod-search-suggestion) .suggestion-item.is-selected {
+  background-color: #5555FF !important;
+  color: #FFFFFF !important;
 }
 
 /* Prompt instructions bar (↑↓ to navigate, etc.) */
@@ -428,4 +463,140 @@
 .theme-dark input[type="checkbox"]:checked {
   background-color: var(--background-modifier-border);
   border-color: var(--background-modifier-border);
+}
+
+/* ---- Community plugins browser ---- */
+
+/* Cards: light text on blue background */
+.theme-dark .community-item {
+  background-color: #0000AA !important;
+  border-color: #00AAAA !important;
+}
+
+.theme-dark .community-item-name {
+  color: #FFFFFF !important;
+}
+
+.theme-dark .community-item-author,
+.theme-dark .community-item-downloads,
+.theme-dark .community-item-updated {
+  color: #88A0B8 !important;
+}
+
+.theme-dark .community-item-desc {
+  color: #90C0C0 !important;
+}
+
+.theme-dark .community-item .flair {
+  color: #000000 !important;
+  background-color: #D4C85A !important;
+}
+
+/* Selected card: NC-style inversion */
+.theme-dark .community-item.is-selected,
+.theme-dark .community-item.is-selected:hover {
+  background-color: #D4C85A !important;
+  border-color: #D4C85A !important;
+}
+
+.theme-dark .community-item.is-selected .community-item-name,
+.theme-dark .community-item.is-selected:hover .community-item-name {
+  color: #000000 !important;
+}
+
+.theme-dark .community-item.is-selected .community-item-author,
+.theme-dark .community-item.is-selected:hover .community-item-author,
+.theme-dark .community-item.is-selected .community-item-downloads,
+.theme-dark .community-item.is-selected:hover .community-item-downloads,
+.theme-dark .community-item.is-selected .community-item-updated,
+.theme-dark .community-item.is-selected:hover .community-item-updated {
+  color: #555500 !important;
+  opacity: 1 !important;
+}
+
+.theme-dark .community-item.is-selected .community-item-desc,
+.theme-dark .community-item.is-selected:hover .community-item-desc {
+  color: #333300 !important;
+}
+
+.theme-dark .community-item.is-selected .flair,
+.theme-dark .community-item.is-selected:hover .flair {
+  color: #D4C85A !important;
+  background-color: #000000 !important;
+}
+
+/* Plugin detail page: dark text on gray modal background */
+.theme-dark .community-modal-info-name {
+  color: #000000 !important;
+}
+
+.theme-dark .community-modal-info-author,
+.theme-dark .community-modal-info-repo,
+.theme-dark .community-modal-info-version,
+.theme-dark .community-modal-info-downloads,
+.theme-dark .community-modal-info-downloads-text {
+  color: #444444 !important;
+}
+
+.theme-dark .community-modal-info-desc {
+  color: #222222 !important;
+}
+
+.theme-dark .community-modal-readme {
+  color: #222222 !important;
+}
+
+.theme-dark .community-modal-readme *:not(pre):not(pre *):not(code) {
+  color: #222222 !important;
+}
+
+/* Code blocks inside readme: keep light text on dark background */
+.theme-dark .community-modal-readme pre,
+.theme-dark .community-modal-readme pre *,
+.theme-dark .community-modal-readme code {
+  background-color: #000000 !important;
+  color: #90C0C0 !important;
+}
+
+.theme-dark .community-modal-readme a,
+.theme-dark .community-modal-info a {
+  color: #006666 !important;
+}
+
+.theme-dark .community-modal-readme a:hover,
+.theme-dark .community-modal-info a:hover {
+  color: #008888 !important;
+}
+
+/* Search summary */
+.theme-dark .community-modal-search-summary {
+  color: #333333 !important;
+}
+
+/* ---- Search suggestions dropdown ---- */
+
+.theme-dark .suggestion-container.mod-search-suggestion {
+  background-color: #000088 !important;
+  border: 1px solid #00AAAA !important;
+}
+
+.theme-dark .suggestion-container.mod-search-suggestion .suggestion {
+  background-color: #000088 !important;
+}
+
+.theme-dark .search-suggest-item {
+  color: #90C0C0 !important;
+}
+
+.theme-dark .search-suggest-item.mod-group {
+  color: #D4C85A !important;
+}
+
+.theme-dark .search-suggest-item.is-selected {
+  background-color: #5555FF !important;
+  color: #FFFFFF !important;
+}
+
+.theme-dark .search-suggest-info-text {
+  color: #88A0B8 !important;
 }
