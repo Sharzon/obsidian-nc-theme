@@ -30,8 +30,44 @@
   color: var(--graph-line);
 }
 
-/* Graph controls */
+/* Graph controls panel */
 .theme-dark .graph-controls {
   background-color: var(--background-secondary);
   border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+/* Section headers: Filters, Groups, Display, Forces */
+.theme-dark .graph-control-section-header {
+  color: var(--text-muted);
+}
+
+/* Setting labels and descriptions */
+.theme-dark .graph-controls .setting-item-name,
+.theme-dark .graph-controls .setting-item-description {
+  color: var(--text-normal);
+}
+
+/* Tree item labels (collapsible sections) */
+.theme-dark .graph-controls .tree-item-self .tree-item-inner {
+  color: var(--text-normal);
+}
+
+/* Control buttons (close, reset, open) */
+.theme-dark .graph-controls-button {
+  color: var(--text-muted);
+}
+
+.theme-dark .graph-controls-button:hover {
+  color: var(--text-normal);
+  background-color: var(--interactive-hover);
+}
+
+/* Sliders */
+.theme-dark .graph-controls input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--background-modifier-border);
+}
+
+.theme-dark .graph-controls input[type="range"]::-webkit-slider-thumb {
+  background: var(--text-normal);
 }

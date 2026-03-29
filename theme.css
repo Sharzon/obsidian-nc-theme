@@ -3,7 +3,7 @@
 /* === variables.css === */
 /* ============================================
    NC Theme Classic — CSS Variables
-   "Это NC" — точные CGA-цвета, узнаваемая палитра
+   "This is NC" — exact CGA colors, recognizable palette
    ============================================ */
 
 .theme-dark {
@@ -26,21 +26,21 @@
   /* Global Obsidian color palette (used by Canvas, callouts, etc.)
      Mapped to our actual theme colors */
   --color-red-rgb: 255, 119, 119;
-  --color-red: #FF7777;           /* ошибки */
+  --color-red: #FF7777;           /* errors */
   --color-orange-rgb: 212, 160, 90;
-  --color-orange: #D4A05A;        /* тёплый акцент */
+  --color-orange: #D4A05A;        /* warm accent */
   --color-yellow-rgb: 212, 200, 90;
-  --color-yellow: #D4C85A;        /* акцент (selected) */
+  --color-yellow: #D4C85A;        /* accent (selected) */
   --color-green-rgb: 112, 221, 112;
-  --color-green: #70DD70;         /* успех, код */
+  --color-green: #70DD70;         /* success, code */
   --color-cyan-rgb: 0, 170, 170;
-  --color-cyan: #00AAAA;          /* рамки, бордеры */
+  --color-cyan: #00AAAA;          /* borders, frames */
   --color-blue-rgb: 85, 85, 255;
-  --color-blue: #5555FF;          /* подсветка */
+  --color-blue: #5555FF;          /* highlight */
   --color-purple-rgb: 170, 0, 170;
   --color-purple: #AA00AA;        /* magenta */
   --color-pink-rgb: 160, 216, 216;
-  --color-pink: #A0D8D8;          /* ссылки */
+  --color-pink: #A0D8D8;          /* links */
 
   /* Canvas */
   --canvas-dot-pattern: #88A0B8;
@@ -60,7 +60,7 @@
   --background-modifier-error-hover: #FF5555;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
-  /* Text — смягчённая палитра (Вариант A) */
+  /* Text — softened palette (Variant A) */
   --text-normal: #90C0C0;
   --text-muted: #88A0B8;
   --text-faint: #7A9AB8;
@@ -216,7 +216,7 @@
 
 /* === 01-workspace.css === */
 /* ============================================
-   Workspace — основная область редактора
+   Workspace — main editor area
    ============================================ */
 
 .theme-dark {
@@ -246,7 +246,7 @@
 
 /* === 02-sidebar.css === */
 /* ============================================
-   Sidebar — навигация файлов (панель NC)
+   Sidebar — file navigation (NC panel)
    ============================================ */
 
 /* Sidebar container */
@@ -293,7 +293,7 @@
 
 /* === 03-tabs.css === */
 /* ============================================
-   Tabs — вкладки (заголовок панели NC)
+   Tabs — NC panel header
    ============================================ */
 
 /* Tab container */
@@ -329,7 +329,7 @@
 
 /* === 04-statusbar.css === */
 /* ============================================
-   Status Bar — нижняя панель (F-key бар NC)
+   Status Bar — bottom panel (NC F-key bar)
    ============================================ */
 
 .theme-dark .status-bar {
@@ -741,10 +741,46 @@
   color: var(--graph-line);
 }
 
-/* Graph controls */
+/* Graph controls panel */
 .theme-dark .graph-controls {
   background-color: var(--background-secondary);
   border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+/* Section headers: Filters, Groups, Display, Forces */
+.theme-dark .graph-control-section-header {
+  color: var(--text-muted);
+}
+
+/* Setting labels and descriptions */
+.theme-dark .graph-controls .setting-item-name,
+.theme-dark .graph-controls .setting-item-description {
+  color: var(--text-normal);
+}
+
+/* Tree item labels (collapsible sections) */
+.theme-dark .graph-controls .tree-item-self .tree-item-inner {
+  color: var(--text-normal);
+}
+
+/* Control buttons (close, reset, open) */
+.theme-dark .graph-controls-button {
+  color: var(--text-muted);
+}
+
+.theme-dark .graph-controls-button:hover {
+  color: var(--text-normal);
+  background-color: var(--interactive-hover);
+}
+
+/* Sliders */
+.theme-dark .graph-controls input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--background-modifier-border);
+}
+
+.theme-dark .graph-controls input[type="range"]::-webkit-slider-thumb {
+  background: var(--text-normal);
 }
 
 /* === 15-blockquotes.css === */
@@ -815,8 +851,13 @@
    Lists
    ============================================ */
 
-/* Unordered list markers */
+/* Unordered list markers — triangle from DOS CP437 */
+.theme-dark .markdown-rendered ul > li {
+  list-style-type: none;
+}
+
 .theme-dark .markdown-rendered ul > li::marker {
+  content: "\25BA ";
   color: var(--text-muted);
 }
 
@@ -1075,7 +1116,7 @@
 
 /* ---- Modals as NC dialogs ---- */
 
-/* All modals: NC dialog style (серый фон, чёрный текст) */
+/* All modals: NC dialog style (gray bg, black text) */
 .theme-dark .modal {
   background-color: #AAAAAA !important;
   color: #000000 !important;

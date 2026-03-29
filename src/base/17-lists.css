@@ -2,8 +2,13 @@
    Lists
    ============================================ */
 
-/* Unordered list markers */
+/* Unordered list markers — triangle from DOS CP437 */
+.theme-dark .markdown-rendered ul > li {
+  list-style-type: none;
+}
+
 .theme-dark .markdown-rendered ul > li::marker {
+  content: "\25BA ";
   color: var(--text-muted);
 }
 

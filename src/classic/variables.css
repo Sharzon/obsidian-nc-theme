@@ -1,6 +1,6 @@
 /* ============================================
    NC Theme Classic — CSS Variables
-   "Это NC" — точные CGA-цвета, узнаваемая палитра
+   "This is NC" — exact CGA colors, recognizable palette
    ============================================ */
 
 .theme-dark {
@@ -23,21 +23,21 @@
   /* Global Obsidian color palette (used by Canvas, callouts, etc.)
      Mapped to our actual theme colors */
   --color-red-rgb: 255, 119, 119;
-  --color-red: #FF7777;           /* ошибки */
+  --color-red: #FF7777;           /* errors */
   --color-orange-rgb: 212, 160, 90;
-  --color-orange: #D4A05A;        /* тёплый акцент */
+  --color-orange: #D4A05A;        /* warm accent */
   --color-yellow-rgb: 212, 200, 90;
-  --color-yellow: #D4C85A;        /* акцент (selected) */
+  --color-yellow: #D4C85A;        /* accent (selected) */
   --color-green-rgb: 112, 221, 112;
-  --color-green: #70DD70;         /* успех, код */
+  --color-green: #70DD70;         /* success, code */
   --color-cyan-rgb: 0, 170, 170;
-  --color-cyan: #00AAAA;          /* рамки, бордеры */
+  --color-cyan: #00AAAA;          /* borders, frames */
   --color-blue-rgb: 85, 85, 255;
-  --color-blue: #5555FF;          /* подсветка */
+  --color-blue: #5555FF;          /* highlight */
   --color-purple-rgb: 170, 0, 170;
   --color-purple: #AA00AA;        /* magenta */
   --color-pink-rgb: 160, 216, 216;
-  --color-pink: #A0D8D8;          /* ссылки */
+  --color-pink: #A0D8D8;          /* links */
 
   /* Canvas */
   --canvas-dot-pattern: #88A0B8;
@@ -57,7 +57,7 @@
   --background-modifier-error-hover: #FF5555;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
-  /* Text — смягчённая палитра (Вариант A) */
+  /* Text — softened palette (Variant A) */
   --text-normal: #90C0C0;
   --text-muted: #88A0B8;
   --text-faint: #7A9AB8;

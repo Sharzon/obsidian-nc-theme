@@ -115,7 +115,7 @@
 
 /* ---- Modals as NC dialogs ---- */
 
-/* All modals: NC dialog style (серый фон, чёрный текст) */
+/* All modals: NC dialog style (gray bg, black text) */
 .theme-dark .modal {
   background-color: #AAAAAA !important;
   color: #000000 !important;
