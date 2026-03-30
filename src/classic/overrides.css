@@ -184,6 +184,7 @@
 /* Re-apply specific backgrounds where needed */
 .theme-dark .vertical-tab-content select,
 .theme-dark .vertical-tab-content input[type="text"],
+.theme-dark .vertical-tab-content input[type="search"],
 .theme-dark .vertical-tab-content .search-input-container input {
   background-color: #000000 !important;
   color: #90C0C0 !important;
@@ -282,7 +283,9 @@
 }
 
 .theme-dark .modal input[type="text"],
-.theme-dark .vertical-tab-content input[type="text"] {
+.theme-dark .modal input[type="search"],
+.theme-dark .vertical-tab-content input[type="text"],
+.theme-dark .vertical-tab-content input[type="search"] {
   background-color: #000000 !important;
   color: #90C0C0 !important;
   border: 1px solid #00AAAA !important;
@@ -471,6 +474,7 @@
 .theme-dark .community-item {
   background-color: #0000AA !important;
   border-color: #00AAAA !important;
+  color: #90C0C0 !important;
 }
 
 .theme-dark .community-item-name {
@@ -572,6 +576,7 @@
 .theme-dark .community-modal-search-summary {
   color: #333333 !important;
 }
+
 
 /* ---- Search suggestions dropdown ---- */
 

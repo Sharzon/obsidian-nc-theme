@@ -33,11 +33,15 @@
 
 .theme-dark .suggestion-item {
   color: var(--text-normal);
+  --text-muted: #222222;
+  --text-faint: #333333;
 }
 
 .theme-dark .suggestion-item.is-selected {
-  background-color: var(--nav-item-background-active);
-  color: var(--interactive-accent);
+  background-color: #00AAAA;
+  color: #000000;
+  --text-muted: #333333;
+  --text-faint: #444444;
 }
 
 /* Settings */
