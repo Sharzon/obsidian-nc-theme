@@ -870,15 +870,20 @@
   display: none;
 }
 
-/* Also hide in live preview */
+/* Replace dash with triangle in live preview.
+   Use color: transparent (not font-size: 0) to keep cursor visible. */
 .theme-dark .cm-formatting-list-ul {
-  font-size: 0;
+  color: transparent;
+  position: relative;
 }
 
 .theme-dark .cm-formatting-list-ul::after {
-  content: "\25BA  ";
-  font-size: 1rem;
+  content: "\25BA ";
+  position: absolute;
+  left: 0;
+  top: 0;
   color: var(--text-muted);
+  font-size: 1rem;
 }
 
 /* Ordered list markers */
